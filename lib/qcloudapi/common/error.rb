@@ -1,12 +1,12 @@
 module Qcloudapi
   module Common
     class Error
-      attr_accessor :code, :message, :text
+      attr_accessor :code, :message, :ext
 
-      def initialize(code, message, text)
+      def initialize(code, message, ext)
         @code = code
         @message = message
-        @text = text
+        @ext = ext
       end
     end
   end

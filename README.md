@@ -28,18 +28,18 @@ qcloudapi是为了让Ruby开发者能够在自己的代码里更快捷方便的�
     
     
     // 请求参数，请参考wiki文档上对应接口的说明
-    params = {:appId => 1, :op_type => 'add', 'contents.0.name' => 'test'}
+    params = [{:name => 'test'}]
     
     service = Qcloudapi::Module::Yunsou.new
 
     // 请求方法为对应接口的接口名，请参考wiki文档上对应接口的接口名
-    result = service.DataManipulation(params)
+    result = service.add_docs(1, params)
     
-    if (result == false) {
+    if (result == false) 
         // 请求失败，解析错误信息
         error = service->getError();
         puts "Error code: #{error.code} message: #{error.message}"
-    } else {
+    else
         // 请求成功
         puts result
-    }
+    end

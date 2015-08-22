@@ -19,7 +19,8 @@ module Qcloudapi
           key = k.to_s.gsub('_', '.') 
           "#{key}=#{v.to_s}"
         end.compact.sort.join('&')
-        src_str = "#{request_method}#{request_host}#{request_path}?#{param_str}"
+        
+        "#{request_method}#{request_host}#{request_path}?#{param_str}"
       end
     end
   end

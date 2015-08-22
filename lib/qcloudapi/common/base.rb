@@ -5,7 +5,7 @@ module Qcloudapi
       
       # 设置错误信息
       def set_error(code, message, ext = '')
-        @error = Qcloudapi::Common::Error.new(code, message, text)
+        @error = Qcloudapi::Common::Error.new(code, message, ext)
       end
     end
   end
